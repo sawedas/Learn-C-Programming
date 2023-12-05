@@ -9,6 +9,6 @@ int main() //main is function start program
     printf("Age : %d\n", 19);
     printf("Gender : %c\n",'M');
     printf("GPA = %.2f\n", 3.86);
-    printf("This is good student.");
+    printf("This is good student.\n");
     return 0;
 } 
