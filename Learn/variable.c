@@ -10,7 +10,7 @@ int main()
     float gpa = 3.86;
     //char name_variable[amount of charecter] = "string" <-- How make variable keep string data?
     char name[6] = "Tachit";
-    char surname[10] = "Julamphan", nick_name[3] = "Tar";
+    char surname[10] = "Julamphan", nick_name[3] = "Tar"; //if you will make variable same type you can make same line to make it.
     bool status = true;
     //change data in existing variable
     gpa = 3.96;
