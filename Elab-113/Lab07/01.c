@@ -1,16 +1,32 @@
 #include <stdio.h>
 
 int main(){
-    int a=4, b=3, c, d, e;
-    float f=2,g=5, h, i, j, k;
-
-    c = f/b*f;                 /* c = ? */
-    h = a++/(float)b;          /* h = ? */
-    j = (float)c/h--;          /* j = ? */
-    d = b*h/c;                 /* d = ? */
-    i = d*f+h--;               /* i = ? */
-    e = a*d++/i;               /* e = ? */
-    k = (int)i*d/(float)       /* k = ? */
-    
-    printf("d = %d", d);
+    char str[1000] = "";
+    int amount_sara = 0;
+    printf("String (without a space): ");
+    scanf("%s", str);
+    for (int i = 0; str[i] != '\0'; i++){
+        if (str[i] == 'a' || str[i] == 'A'){
+            amount_sara++;
+            printf("%c ", str[i]);
+        }else if (str[i] == 'e' || str[i] == 'E'){
+            amount_sara++;
+            printf("%c ", str[i]);
+        }else if (str[i] == 'i' || str[i] == 'I'){
+            amount_sara++;
+            printf("%c ", str[i]);
+        }else if (str[i] == 'o' || str[i] == 'O'){
+            amount_sara++;
+            printf("%c ", str[i]);
+        }else if (str[i] == 'u' || str[i] == 'U'){
+            amount_sara++;
+            printf("%c ", str[i]);
+        }
+    }
+    printf("\n");
+    if (amount_sara > 1){
+        printf("This string contains %d vowels.", amount_sara);
+    }else if (amount_sara >= 0){
+        printf("This string contains %d vowel.", amount_sara);
+    }
 }
