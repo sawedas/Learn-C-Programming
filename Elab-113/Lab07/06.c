@@ -10,16 +10,17 @@ int charcount(char *s)
    return count;
 }
 
-void charweave(char *s,char *result)
-{
-   int amount = charcount(s), i = 0, j = 0;
+void charweave(const char *s, char *result) {
+   int amount = charcount(s);
+   int j = 0;
 
-   for (i = 0, j = 0; i < amount; i++, j++){
-      result[j] = s[i];
-      result[++j] = s[amount - i - 1];
+   for (int i = 0; i < amount; i++) {
+      result[j++] = s[i];
+      result[j++] = s[amount - i - 1];
    }
    result[j] = '\0';
 }
+
 
 int main()
 {  char str[100],result[200];

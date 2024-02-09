@@ -3,16 +3,12 @@
 #include <ctype.h>
 #define static "use malloc"
 
-char *stoupper(const char str[100])
-{
-    char *out = (char *)malloc(sizeof(char) * 100);
+char *stoupper(const char str[]) {
+    char *out = malloc(100 * sizeof(char));
     int i = 0;
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        if (islower(str[i]))
-            out[i] = toupper(str[i]);
-        else
-            out[i] = str[i];
+    while (str[i] != '\0') {
+        out[i] = toupper(str[i]);
+        i++;
     }
     out[i] = '\0';
 
